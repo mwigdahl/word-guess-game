@@ -1,37 +1,55 @@
 // pseudo coding notes
 
 
-// Randomly select a word - make array
+// Setup gloabl variables
 
 var rivers = ["colorado", "columbia", "green", "yampa", "snake"];
-console.log(rivers);
+var keyStroke = 15;
+var wins = 0;
 
-// Replace the the div with the underscores for the word
+// Randomly select a word
+
+var riverSelect = rivers[Math.floor(Math.random() * rivers.length)];
+console.log(riverSelect);
+
+// get selected words length
+
+var riverArray = [];
+for (var i = 0; i < riverSelect.length; i++) {
+var riverSelect = riverArray[i] = "_";
+console.log(riverArray);
+}
+
+// show selected word length with "_"
 
  //1. get user input "userGuess"
 
 document.onkeyup = function(event) {
-    var userGuess = event.key;
-    var userText = document.getElementById('user-input');
-    //console.log(userGuess);
- //2. create new variable that convert to lowercase() .toLowerCase() "userGuesslower"
-    var userGuessLower = userGuess.toLowerCase();
-    userText.textContent = event.key;
-    //console.log(userGuessLower);
+    var userGuess = event.key.toLowerCase();
+    document.getElementById('user-input').textContent = userGuess + ', ';
+    keyStroke--;
+    console.log(keyStroke);
 }
 
-// Show letter typed
+// var keyStroke = guessesLeft;
+// console.log(guessesLeft);
 
-// var userText = document.getElementById('user-input');
-// document.onkeyup = function(event) {
-//     userGuessLower.textContent = event.key
+// var guesses = function(event) {   
+//     var guessLeft = keyStoke;
+//     console.log("guessleft:", guessLeft);
+//     // var guessesText = document.getElementById('guesses-left');
+//     // return guessesText.textContext = event.keyStroke;
+//     //console.log(keyStroke);
 // }
-// // if letter is true post add to the screen
+
+// Replace the the div with the underscores for the word
+
+
+// if letter is true post add to the screen
 
 // else remove # of guesses left
 
 //Score starts at 0
-var score = 0;
 
 
 

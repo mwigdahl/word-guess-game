@@ -4,7 +4,7 @@
 // Setup gloabl variables
 
 var rivers = ["colorado", "columbia", "green", "yampa", "snake"];
-var keyStroke = 15;
+var remainingChances = 15;
 var wins = 0;
 
 // Randomly select a word
@@ -14,32 +14,38 @@ console.log(riverSelect);
 
 // get selected words length
 
-var riverArray = [];
-for (var i = 0; i < riverSelect.length; i++) {
-var riverSelect = riverArray[i] = "_";
-console.log(riverArray);
+var riverArray = function (word) {
+    var str = riverSelect; 
+    var n = str.length;
+    for (var i = 0; i < n.length; i++) {
+        console.log(n[i]);
+        document.getElementById('letter-count').textContent = n[i] + "_";
+        console.log(riverArray);
+    };
 }
+
+riverArray(riverSelect);
 
 // show selected word length with "_"
 
- //1. get user input "userGuess"
+//1. get user input "userGuess"
 
-document.onkeyup = function(event) {
+document.onkeyup = function (event) {
     var userGuess = event.key.toLowerCase();
     document.getElementById('user-input').textContent = userGuess + ', ';
-    keyStroke--;
-    console.log(keyStroke);
+    remainingChances--;
+    console.log(remainingChances);
 }
 
-// var keyStroke = guessesLeft;
+// var remainingChances = guessesLeft;
 // console.log(guessesLeft);
 
 // var guesses = function(event) {   
 //     var guessLeft = keyStoke;
 //     console.log("guessleft:", guessLeft);
 //     // var guessesText = document.getElementById('guesses-left');
-//     // return guessesText.textContext = event.keyStroke;
-//     //console.log(keyStroke);
+//     // return guessesText.textContext = event.remainingChances;
+//     //console.log(remainingChances);
 // }
 
 // Replace the the div with the underscores for the word

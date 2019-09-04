@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Word Guess Game</title>
-    <link type="text/javascript" href="assets/javascript/game.js">
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container game">
         <div class="row text-center py-5">
             <div class="col-md-12">
                 <h1>Hangman</h1>
@@ -27,6 +27,7 @@
                 <p>_ _ _ _ _ _ _ _</p>
                 <p>Number of Guesses Remaining:</p>
                 <p>Letters Already Guessed:</p>
+                <p id="user-input">text</p>
             </div>
         </div>
         <div class="row">
